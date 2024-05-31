@@ -1,7 +1,6 @@
-let output = "";
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
-for (let i = 0; i < alphabet.length; i++) {
-  let boucle = alphabet[i];
-  output = output + boucle;
+let code = "";
+for (let i = 97; i < 123; i++) {
+  let chr = String.fromCharCode(i);
+  code = code + chr;
 }
-console.log(output);
+console.log(code);
