@@ -1,9 +1,8 @@
 let { argv } = require("process");
 
-let mot = argv.splice(2);
-let phrase = mot;
+const mot = argv.splice(2);
 
-for (let i = 0; i < phrase.length; i++) {
-  let coupage = phrase[i];
+for (let i = 0; i < mot.length; i++) {
+  let coupage = mot[i];
   console.log(coupage);
 }
