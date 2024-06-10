@@ -1,32 +1,22 @@
 //Recupere l'argument
-// Récupère l'argument
-const { argv } = require("process");
+let { argv } = require("process");
+let letter = argv.splice(2);
 
-try {
-  // Vérifie s'il y a au moins un argument fourni
-  if (argv.length < 3) {
-    throw new Error("Aucun argument fourni. Veuillez fournir une lettre.");
-  }
+//Convertir l'argument en ASCII
+let asciiValues = letter.map((word) =>
+  word.split("").map((char) => char.charCodeAt(0))
+);
 
-  const letter = argv[2];
+//Converti le tableau en number
+let asciiTrueValue = asciiValues.toString();
+let asciiNumberValue = Number(asciiTrueValue);
+//console.log(asciiNumberValue);
 
-  // Vérifie que l'argument est une lettre
-  if (letter.length !== 1 || !/^[a-zA-Z]$/.test(letter)) {
-    throw new Error("Argument invalide. Veuillez fournir une seule lettre.");
-  }
+let lastLetter = 123;
+let result = "";
 
-  // Convertir l'argument en ASCII
-  const asciiValue = letter.charCodeAt(0);
-
-  const lastLetter = 123; // Valeur ASCII pour '{'
-  let result = "";
-
-  for (let i = asciiValue; i < lastLetter; i++) {
-    let letterSequence = String.fromCharCode(i);
-    result = result + letterSequence;
-  }
-
-  console.log(result);
-} catch (error) {
-  console.error(`Erreur: ${error.message}`);
+for (let i = asciiNumberValue; i < lastLetter; i++) {
+  let letterSequence = String.fromCharCode(i);
+  result = result + letterSequence;
 }
+console.log(result);
