@@ -12,7 +12,11 @@ for (let i = stringRedress.length - 1; i >= 0; i--) {
 }
 
 //Fonction qui gere les erreur si l'argument et un number ou vide
-if (stringRedress == reverse.toString() || stringRedress === "undefined") {
+if (
+  stringRedress == reverse.toString() ||
+  stringRedress === "undefined" ||
+  stringRedress === reverse
+) {
   console.log("Erreur");
 } else {
   console.log(reverse);

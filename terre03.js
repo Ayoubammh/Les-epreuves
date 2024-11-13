@@ -1,22 +1,29 @@
 //Recupere l'argument
-let { argv } = require("process");
+const { log } = require("console");
+const { argv } = require("process");
 let letter = argv.splice(2);
 
 //Convertir l'argument en ASCII
-let asciiValues = letter.map((word) =>
+const asciiValues = letter.map((word) =>
   word.split("").map((char) => char.charCodeAt(0))
 );
 
 //Converti le tableau en number
-let asciiTrueValue = asciiValues.toString();
-let asciiNumberValue = Number(asciiTrueValue);
+const asciiTrueValue = asciiValues.toString();
+const asciiNumberValue = Number(asciiTrueValue);
 //console.log(asciiNumberValue);
 
-let lastLetter = 123;
+const lastLetter = 123;
 let result = "";
 
 for (let i = asciiNumberValue; i < lastLetter; i++) {
   let letterSequence = String.fromCharCode(i);
   result = result + letterSequence;
 }
-console.log(result);
+
+//Gerer le nombre d'argument en entrer et qu'ils prennent en compte que les valeurs ascii de A à z
+if (letter.length !== 1 || !/^[a-zA-Z]$/.test(String(letter))) {
+  console.log("Error");
+} else {
+  console.log(result);
+}
