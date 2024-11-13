@@ -1,3 +1,4 @@
+const { log } = require("console");
 const { argv, loadEnvFile } = require("process");
 
 //recupérer les 2 arguments et les transformer en number
@@ -9,14 +10,10 @@ const resultat = firstNumber / secondNumber;
 const reste = firstNumber % secondNumber;
 
 //fonction qui affiche le resultat des arguments diviser en fonction des attentes
+
 if (firstNumber > secondNumber && reste > 0) {
   console.log(`resultat : ${resultat}`);
   console.log(`reste : ${reste}`);
-} else if (
-  firstNumber < secondNumber ||
-  reste === 0 ||
-  isNaN(resultat) ||
-  secondNumber == 0
-) {
-  console.log("erreur. ");
+} else if (firstNumber < secondNumber || secondNumber === 0) {
+  console.log("erreur.");
 }
