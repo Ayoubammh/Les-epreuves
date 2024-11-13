@@ -1,3 +1,4 @@
+const { log } = require("console");
 let { argv } = require("process");
 
 const mot = argv.splice(2);
