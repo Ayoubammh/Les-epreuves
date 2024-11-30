@@ -1,7 +1,6 @@
 //Recupere l'argument
-const { log } = require("console");
 const { argv } = require("process");
-let letter = argv.splice(2);
+let letter = argv.slice(2);
 
 //Convertir l'argument en ASCII
 const asciiValues = letter.map((word) =>
