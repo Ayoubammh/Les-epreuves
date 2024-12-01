@@ -20,7 +20,7 @@ if(characters[0] === undefined || characters > characters[0] || Number(character
    //console.log(letter++);
    }
   console.log(Number(table.slice(-1)) + 1);
-    
+    log
 }
 
 
