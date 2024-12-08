@@ -1,34 +1,31 @@
-const argument = process.argv.splice(2);
+const arguments = process.argv.splice(2);
 
 //recuperer le premier nombre et l'exposant et les convertir en nombre
-const firstNumber = Number(argument[0])
-const exhibitor = Number(argument[1])
+const baseNumber = arguments[0];
+const exponent = arguments[1];
+
+if (baseNumber === undefined){
+    console.log("vous n'avez rien mis ! ");
+
+} else if(arguments.length !== 2 ){
+    console.log("Il ne faut avoir que deux nombres !");
 
 
-
-if(argument[0] === undefined ){
-    console.log("vous n'avez rien mis !");
-    
-}else if(!Number(argument[0]) || !Number(argument[1]) ){
-    console.log("Vous devez mettre que des nombres !");
-}else if(argument.length !== 2){
-    console.log("Il ne faut avoir que deux nombre !");
-}else if(exhibitor < 0){
+}else if(exponent < 0){
     console.log("L'exposant doit etre positif !");
+
+}else if(!Number(baseNumber) || !Number(exponent)){
+    console.log("Vous devez mettre que des nombres !");
+    
 }else{
-    let puissance = firstNumber ;
-for(let i = 1; i < exhibitor; i++){
-      puissance *= firstNumber
+    let puissance = baseNumber ;
+for(let i = 1; i < exponent; i++){
+      
+    puissance *= baseNumber
       
      };
-     console.log(puissance );
+     console.log(puissance);
     
 }
-
-
-
-
-
-
 
 
