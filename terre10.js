@@ -25,6 +25,9 @@ if(number == undefined){
 }else if(argument.length !==  1){
 console.log("Vous devez mettre juste un nombre.");
 
+} else if( number == 1){
+    console.log("Le chiffre  1 n'est pas prit en compte.");
+    
 }
 
  else if(number == 2 || number == 3 || number == 5){
