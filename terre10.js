@@ -16,10 +16,7 @@ for(let i in tableNumber){
 // pour recuperer le dernier chiffre d'un nombre et savoir si il est divisble par 2 ou 5
 lastDigit = number % 10;
 
-if(number == undefined){
-    console.log("Vous n'avez rien mit !");
-    
-} else if(!Number(number)){
+ if(!Number(number)){
     console.log("Vous devez mettre un nombre.");
     
 }else if(argument.length !==  1){
