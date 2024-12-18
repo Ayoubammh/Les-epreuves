@@ -14,9 +14,14 @@ if(argument.length !== 1){
     
 } else if(heures > 24){
     console.log("Nous n'avons que 24H dans une journée.");
+
+
+
 }else if(minutes >= 60){   
     console.log("Nous n'avons que 60 minutes dans une heure.");
     
+
+
 }else if(argument[0] == "12:" + minutes + "PM"){
     console.log("00:" + minutes);
     
@@ -25,6 +30,7 @@ if(argument.length !== 1){
 else if(timeTable == "AM"){
     console.log(argument[0].slice(0, 5));
     
+
 } else if(timeTable == "PM"){
     console.log((Number(heures) + 12) + argument[0].slice(2, 5));
     
