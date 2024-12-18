@@ -9,9 +9,9 @@ const timeTable = argument[0].slice(5,7)
 
 //console.log(heures);
 
-if(argument.length != 1){
+if(argument.length !== 1){
     console.log("Met un argument stp!");
-    return
+    
 } else if(heures > 24){
     console.log("Nous n'avons que 24H dans une journée.");
 }else if(minutes >= 60){   
