@@ -5,17 +5,19 @@ const firstInteger = Number(argument[0])
 const secondInteger = Number(argument[1])
 const thirdInteger = Number(argument[2])
 
-
+for (const element of argument){
+    if(isNaN(element)){
+        console.log("Met que des chiffres !");
+        break
+    }
+}
+    
 if(argument.length != 3){
     console.log("Mettez 3 nombres svp.");
 
-}else if(isNaN(firstInteger) || isNaN(secondInteger) || isNaN(thirdInteger)){ 
-
-     console.log("Met que des chiffres !");
-     
 
 
- } else if(firstInteger ===  secondInteger || secondInteger === thirdInteger || thirdInteger === firstInteger){
+}else if(firstInteger ===  secondInteger || secondInteger === thirdInteger || thirdInteger === firstInteger){
         console.log('erreurs.');
         
     
